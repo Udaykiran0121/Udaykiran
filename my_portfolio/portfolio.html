@@ -1,0 +1,362 @@
+﻿<
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gadari Uday Kiran - Portfolio</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background: #0d1117;
+            color: #c9d1d9;
+            line-height: 1.6;
+            scroll-behavior: smooth;
+        }
+
+        a {
+            text-decoration: none;
+            color: #58a6ff;
+            transition: 0.3s;
+        }
+
+            a:hover {
+                color: #1f6feb;
+            }
+
+        h2, h3 {
+            color: #fff;
+        }
+
+        /* Navbar */
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 40px;
+            background: rgba(15, 32, 39, 0.95);
+            z-index: 1000;
+            backdrop-filter: blur(10px);
+        }
+
+            nav h2 {
+                color: #58a6ff;
+                font-size: 1.5em;
+            }
+
+            nav ul {
+                display: flex;
+                list-style: none;
+                gap: 20px;
+            }
+
+                nav ul li a {
+                    color: #c9d1d9;
+                    font-weight: 500;
+                }
+
+                    nav ul li a:hover {
+                        color: #58a6ff;
+                    }
+
+        /* Hero */
+        .hero {
+            min-height: 80vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+            padding: 0 20px;
+        }
+
+            .hero h1 {
+                font-size: 2.5em;
+                margin-bottom: 5px;
+                animation: fadeIn 2s ease;
+            }
+
+            .hero p {
+                margin: 5px 0;
+                font-size: 1.2em;
+                color: #d1d5db;
+            }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Sections */
+        section {
+            padding: 60px 0;
+            width: 90%;
+            max-width: 1100px;
+            margin: auto;
+        }
+
+        h2 {
+            font-size: 1.8em;
+            margin-bottom: 30px;
+            text-align: center;
+            color: #58a6ff;
+        }
+
+        /* Skills */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px,1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .skill-category {
+            background: #161b22;
+            padding: 15px;
+            border-radius: 10px;
+            transition: 0.3s;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+        }
+
+            .skill-category:hover {
+                transform: translateY(-5px);
+                box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+            }
+
+            .skill-category h3 {
+                color: #58a6ff;
+                margin-bottom: 10px;
+                font-size: 1.1em;
+            }
+
+            .skill-category ul {
+                list-style: none;
+                padding-left: 0;
+            }
+
+                .skill-category ul li {
+                    margin-bottom: 6px;
+                    color: #c9d1d9;
+                    font-size: 0.95em;
+                    position: relative;
+                    padding-left: 12px;
+                }
+
+                    .skill-category ul li::before {
+                        content: '•';
+                        position: absolute;
+                        left: 0;
+                        color: #58a6ff;
+                    }
+
+        /* Projects */
+        .projects {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px,1fr));
+            gap: 15px;
+        }
+
+        .project-card {
+            background: #161b22;
+            padding: 15px;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: 0.3s;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.4);
+        }
+
+            .project-card:hover {
+                transform: translateY(-6px);
+                box-shadow: 0 5px 12px rgba(0,0,0,0.5);
+            }
+
+            .project-card h3 {
+                color: #58a6ff;
+                margin-bottom: 5px;
+            }
+
+            .project-card p {
+                color: #c9d1d9;
+            }
+
+        /* Modal */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.85);
+            justify-content: center;
+            align-items: center;
+            z-index: 2000;
+        }
+
+        .modal-content {
+            background: #161b22;
+            padding: 20px;
+            border-radius: 10px;
+            max-width: 600px;
+            text-align: center;
+        }
+
+        .close-btn {
+            background: #58a6ff;
+            padding: 8px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 15px;
+            display: inline-block;
+        }
+
+            .close-btn:hover {
+                background: #1f6feb;
+            }
+
+        /* Contact */
+        .contact {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+            .contact p {
+                margin: 5px 0;
+            }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 15px;
+            background: #161b22;
+            color: #8b949e;
+            margin-top: 20px;
+        }
+
+        @media(max-width:768px) {
+            nav {
+                padding: 10px 15px;
+            }
+
+            .hero h1 {
+                font-size: 2em;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav>
+        <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Hero -->
+    <section class="hero">
+        <h1>Gadari Uday Kiran</h1>
+        <p>Electrical Engineer | Aspiring Software Developer</p>
+    </section>
+
+    <!-- About -->
+    <section id="about">
+        <h2>About Me</h2>
+        <p>I am a highly motivated Electrical Engineer with hands-on experience in automation and energy efficiency at Sundram Fasteners Ltd. and an internship at BHEL. Skilled in C#, ASP.NET, SQL, HTML, and CSS, I bring a strong analytical mindset and problem-solving skills, consistently delivering high-quality results in fast-paced environments.</p>
+    </section>
+
+    <!-- Skills -->
+    <section id="skills">
+        <h2>Technical Skills</h2>
+        <div class="skills-grid">
+            <div class="skill-category">
+                <h3>Frontend</h3>
+                <ul><li>HTML</li><li>CSS</li></ul>
+            </div>
+            <div class="skill-category">
+                <h3>Backend</h3>
+                <ul><li>C#</li><li>ASP.NET</li></ul>
+            </div>
+            <div class="skill-category">
+                <h3>Database</h3>
+                <ul><li>SQL</li></ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects -->
+    <section id="projects">
+        <h2>Projects</h2>
+        <div class="projects">
+            <div class="project-card" onclick="openModal('modal1')">
+                <h3>Turbo Alternator Testing</h3>
+                <p>Tested and analyzed turbo alternators at BHEL Hyderabad. Documented performance insights.</p>
+            </div>
+            <div class="project-card" onclick="openModal('modal2')">
+                <h3>Automation in Manufacturing</h3>
+                <p>Implemented automation processes at Sundram Fasteners Ltd., improving efficiency and reducing energy usage.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modals -->
+    <div id="modal1" class="modal">
+        <div class="modal-content">
+            <h3>Turbo Alternator Testing</h3>
+            <p>Conducted in-depth testing and analysis of various turbo alternators at BHEL, gaining hands-on experience.</p>
+            <span class="close-btn" onclick="closeModal('modal1')">Close</span>
+        </div>
+    </div>
+
+    <div id="modal2" class="modal">
+        <div class="modal-content">
+            <h3>Automation in Manufacturing</h3>
+            <p>Implemented automation strategies at Sundram Fasteners Ltd., improving system efficiency and reliability.</p>
+            <span class="close-btn" onclick="closeModal('modal2')">Close</span>
+        </div>
+    </div>
+
+    <!-- Contact -->
+    <section id="contact">
+        <h2>Contact</h2>
+        <div class="contact">
+            <p>Email: <a href="mailto:udaykirangadari2018@gmail.com">udaykirangadari2018@gmail.com</a></p>
+            <p>Phone: +91 9652842955</p>
+            <p>Location: Hyderabad, India</p>
+            <p>LinkedIn: <a href="#">LinkedIn Profile</a></p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2025 Gadari Uday Kiran | Portfolio</p>
+    </footer>
+
+    <script>
+        function openModal(id) { document.getElementById(id).style.display = "flex"; }
+        function closeModal(id) { document.getElementById(id).style.display = "none"; }
+    </script>
+
+</body>
+</html>

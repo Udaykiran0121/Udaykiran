@@ -1,0 +1,92 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+        }
+
+        .container {
+            display: flex; /* Side by side */
+            gap: 20px; /* space between boxes */
+            justify-content: center; /* center horizontally */
+            margin-top: 50px;
+        }
+
+        .box {
+            width: 220px;
+            height: 250px;
+            border: 3px solid black;
+            border-radius: 12px;
+            padding: 20px;
+            box-sizing: border-box; /* ensures padding doesn't overflow */
+            color: white;
+            overflow-y: auto; /* scroll if content is bigger */
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .box1 {
+            background-color: brown;
+        }
+
+        .box2 {
+            background-color: darkgreen;
+        }
+
+        .box3 {
+            background-color: darkblue;
+        }
+
+        ul {
+            margin: 0;
+            padding-left: 20px; /* bullet indentation */
+        }
+
+        li {
+            margin-bottom: 8px;
+        }
+
+        /* Hover: zoom in */
+        .box:hover {
+            transform: scale(1.1);
+        }
+    </style>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+        <div class="container">
+            <div class="box box1">
+                <h3>Hot Coffee</h3>
+                <ul>
+                    <li>Espresso</li>
+                    <li>Latte</li>
+                    <li>Cappuccino</li>
+                    <li>Americano</li>
+                </ul>
+            </div>
+
+            <div class="box box2">
+                <h3>Cold Coffee</h3>
+                <ul>
+                    <li>Iced Latte</li>
+                    <li>Frappuccino</li>
+                    <li>Cold Brew</li>
+                    <li>Iced Mocha</li>
+                </ul>
+            </div>
+
+            <div class="box box3">
+                <h3>Specials</h3>
+                <ul>
+                    <li>Mocha</li>
+                    <li>Caramel Macchiato</li>
+                    <li>Irish Coffee</li>
+                    <li>Affogato</li>
+                </ul>
+            </div>
+        </div>
+
+    </body>
+</html>

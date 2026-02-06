@@ -1,0 +1,86 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        .lamborgani {
+            background-color: aqua;
+            color: black;
+            text-align: center;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            padding-top:80px;
+            
+        }
+
+            .lamborgani h1 {
+                margin: 0;
+            }
+
+        #text {
+            color: black;
+            text-align: center;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+        }
+
+        body {
+            background-image: url('https://images.pexels.com/photos/3802510/pexels-photo-3802510.jpeg');
+            background-size: cover;
+        }
+
+        div.things {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 10px;
+        }
+
+        div #row {
+            flex: 1;
+            min-width: 100px;
+            text-align: center;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-size: 20px;
+            color: white;
+            cursor: pointer;
+            border: black 2px;
+            border-radius: 20px;
+            padding: 10px;
+            background-color: forestgreen;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: all 0.3s ease;
+            border-style: dashed;
+        }
+
+            div #row:hover {
+                background-color: orange;
+                color: black;
+                margin-top: -2px;
+                box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+                transform: scale(1.05s);
+            }
+
+        hr {
+            border: 1px solid black;
+            margin-top: 20px;
+        }
+        }
+    </style>
+    <meta charset="utf-8" />
+    <title>html titiles </title>
+    <meta name="viewport" content="width=device-width initial-scale=1" />
+</head>
+<body>
+    <div class="lamborgani">
+        <h1>LAMBORGANI</h1>
+        <p id="text">High Speed | Accuracy | Top Model</p>
+    </div>
+    <div class="things">
+            <div id="row">About</div>
+            <div id="row">Services</div>
+            <div id="row">Contact</div>
+            <div id="row">Help</div>
+    </div>
+    <hr />
+
+
+
+</body>
+</html>

@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.36221.1 d17.14
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "multithreading_suspend", "multithreading_suspend.csproj", "{815F9889-D141-4A25-BE82-88A35A75D032}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{815F9889-D141-4A25-BE82-88A35A75D032}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{815F9889-D141-4A25-BE82-88A35A75D032}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{815F9889-D141-4A25-BE82-88A35A75D032}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{815F9889-D141-4A25-BE82-88A35A75D032}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {6C27CCF1-100C-41AF-B596-AD6FAF72D4AC}
+	EndGlobalSection
+EndGlobal

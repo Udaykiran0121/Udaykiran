@@ -1,0 +1,61 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        /* Box styling */
+        #coffee-box {
+            width: 350px;
+            height: 250px;
+            margin: 50px;
+            background-color: peru; /* box color */
+            border-radius: 10px;
+            border: 3px solid brown;
+            display: flex; /* flexbox to center */
+            justify-content: center;
+            align-items: center;
+            transition: transform 0.3s ease, background-color 0.3s ease;
+        }
+
+            /* Hover effect on box */
+            #coffee-box:hover {
+                transform: scale(1.05); /* zooms in box */
+                background-color: chocolate; /* darker color on hover */
+            }
+
+            /* List styling */
+            #coffee-box ul {
+                list-style-type: disc;
+                text-align: left;
+                padding-left: 20px;
+                margin: 0;
+                color: white;
+                font-size: 18px;
+                font-family: Arial, sans-serif;
+            }
+
+                #coffee-box ul li {
+                    margin: 5px 0;
+                    transition: transform 0.2s ease;
+                }
+
+                    /* Hover effect on list items */
+                    #coffee-box ul li:hover {
+                        transform: scale(1.1);
+                        color: yellow;
+                    }
+    </style>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+    <div id="coffee-box">
+        <ul>
+            <li>Espresso</li>
+            <li>Latte</li>
+            <li>Cappuccino</li>
+            <li>Mocha</li>
+            <li>Americano</li>
+        </ul>
+    </div>
+    </body>
+</html>

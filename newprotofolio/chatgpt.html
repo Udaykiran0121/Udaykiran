@@ -1,0 +1,91 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        /* Body styling */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            background: url('https://images.pexels.com/photos/11191243/pexels-photo-11191243.jpeg') no-repeat center center fixed;
+            background-size: cover;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* Login box */
+        .login-box {
+            background-color: rgba(0, 0, 0, 0.7); /* semi-transparent black */
+            padding: 40px;
+            border-radius: 10px;
+            width: 350px;
+            text-align: center;
+            color: white;
+            box-shadow: 0 0 20px rgba(0,0,0,0.5);
+        }
+
+            /* Heading */
+            .login-box h1 {
+                margin-bottom: 30px;
+                font-size: 30px;
+                color: orangered;
+            }
+
+            /* Inputs */
+            .login-box input[type="text"],
+            .login-box input[type="password"] {
+                width: 90%;
+                padding: 12px 15px;
+                margin: 10px 0;
+                border: none;
+                border-radius: 5px;
+                font-size: 16px;
+            }
+
+            /* Login button */
+            .login-box a.login-btn {
+                display: inline-block;
+                padding: 12px 25px;
+                margin-top: 20px;
+                background-color: orangered;
+                color: white;
+                text-decoration: none; /* removes underline */
+                border-radius: 5px;
+                font-weight: bold;
+                font-size: 16px;
+                transition: background-color 0.3s ease;
+            }
+
+                .login-box a.login-btn:hover {
+                    background-color: #ff4500;
+                }
+
+            /* Optional small text */
+            .login-box p {
+                margin-top: 15px;
+                font-size: 14px;
+                color: #ccc;
+            }
+    </style>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+    <body>
+
+        <div class="login-box">
+            <h1>Lamborghini</h1>
+            <form>
+                <input type="text" placeholder="Username" required><br>
+                <input type="password" placeholder="Password" required><br>
+                <a href="newfile.html" class="login-btn">Login</a>
+            </form>
+            <p>Welcome to the Lamborghini Dashboard</p>
+        </div>
+
+    </body>
+</html>
+
+

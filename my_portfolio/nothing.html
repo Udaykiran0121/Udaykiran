@@ -1,0 +1,253 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GADARI UDAY KIRAN - Portfolio</title>
+    <style>
+        /* ====== RESET ====== */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background: #f9fafc;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        a {
+            text-decoration: none;
+            color: #0077cc;
+        }
+
+            a:hover {
+                color: #005999;
+            }
+
+        /* ====== LAYOUT ====== */
+        .container {
+            width: 90%;
+            max-width: 1000px;
+            margin: auto;
+            padding: 20px 0;
+        }
+
+        header {
+            text-align: center;
+            padding: 50px 20px;
+            background: linear-gradient(135deg, #0077cc, #004a80);
+            color: #fff;
+            border-radius: 10px;
+            margin-bottom: 30px;
+        }
+
+            header h1 {
+                font-size: 2.2em;
+                margin-bottom: 10px;
+            }
+
+            header p {
+                font-size: 1.1em;
+                margin-bottom: 15px;
+            }
+
+        .contact {
+            font-size: 0.95em;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+        }
+
+        /* ====== SECTIONS ====== */
+        section {
+            margin-bottom: 40px;
+        }
+
+        h2 {
+            font-size: 1.5em;
+            color: #0077cc;
+            border-bottom: 2px solid #0077cc;
+            display: inline-block;
+            margin-bottom: 15px;
+        }
+
+        p, ul {
+            font-size: 1em;
+            color: #444;
+        }
+
+        ul {
+            list-style-type: square;
+            padding-left: 20px;
+        }
+
+        /* ====== SKILLS ====== */
+        .skills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .skill {
+            background: #0077cc;
+            color: #fff;
+            padding: 6px 12px;
+            border-radius: 20px;
+            font-size: 0.9em;
+        }
+
+        /* ====== EXPERIENCE / EDUCATION ====== */
+        .item {
+            margin-bottom: 20px;
+        }
+
+            .item h3 {
+                font-size: 1.1em;
+                color: #333;
+            }
+
+            .item span {
+                display: block;
+                font-size: 0.9em;
+                color: #666;
+                margin-bottom: 5px;
+            }
+
+        /* ====== FOOTER ====== */
+        footer {
+            text-align: center;
+            padding: 15px;
+            margin-top: 20px;
+            background: #f0f4f9;
+            border-radius: 10px;
+            font-size: 0.9em;
+        }
+
+        /* ====== RESPONSIVE ====== */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 1.8em;
+            }
+
+            .skills {
+                justify-content: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header>
+            <h1>GADARI UDAY KIRAN</h1>
+            <p>Electrical Engineer | Aspiring Software Developer</p>
+            <div class="contact">
+                <div>Email: udaykirangadari2018@gmail.com</div>
+                <div>Phone: +91 9652842955</div>
+                <div>Hyderabad, India</div>
+                <div><a href="#">LinkedIn</a></div>
+            </div>
+        </header>
+
+        <!-- About -->
+        <section>
+            <h2>About Me</h2>
+            <p>Dynamic Electrical Engineer with hands-on experience at Sundram Fasteners Ltd., excelling in automation and energy efficiency. Skilled in C#, ASP.NET, SQL, HTML, and CSS, I aim to apply my technical expertise and problem-solving abilities to IT development and software engineering roles.</p>
+        </section>
+
+        <!-- Skills -->
+        <section>
+            <h2>Technical Skills</h2>
+            <div class="skills">
+                <div class="skill">C#</div>
+                <div class="skill">ASP.NET</div>
+                <div class="skill">SQL</div>
+                <div class="skill">HTML</div>
+                <div class="skill">CSS</div>
+                <div class="skill">Automation Systems</div>
+            </div>
+        </section>
+
+        <!-- Experience -->
+        <section>
+            <h2>Experience</h2>
+            <div class="item">
+                <h3>Electrical Engineer</h3>
+                <span>Sundram Fasteners Ltd., Chennai | 01/2024 - 01/2025</span>
+                <ul>
+                    <li>Designed and maintained electrical systems for automotive manufacturing.</li>
+                    <li>Troubleshot electrical issues and improved operational efficiency.</li>
+                    <li>Implemented automation processes and energy-saving strategies.</li>
+                </ul>
+            </div>
+            <div class="item">
+                <h3>Project Intern</h3>
+                <span>Bharat Heavy Electricals Limited, Hyderabad | 09/2023 - 12/2023</span>
+                <ul>
+                    <li>Analyzed and tested turbo alternators to study working principles.</li>
+                    <li>Conducted hands-on testing at BHEL facilities.</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Education -->
+        <section>
+            <h2>Education</h2>
+            <div class="item">
+                <h3>B.Tech / B.E. in Electrical Engineering</h3>
+                <span>J.B. Institute of Engineering & Technology, Hyderabad | 07/2024</span>
+            </div>
+        </section>
+
+        <!-- Projects -->
+        <section>
+            <h2>Projects</h2>
+            <div class="item">
+                <h3>Testing of Turbo Alternators</h3>
+                <span>09/2023 - 12/2023, BHEL Hyderabad</span>
+                <ul>
+                    <li>Project focused on testing and analysis of turbo alternators.</li>
+                    <li>Documented performance parameters and analyzed working principles.</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Achievements -->
+        <section>
+            <h2>Key Achievements</h2>
+            <ul>
+                <li>Received academic scholarship during B.Tech.</li>
+                <li>Ranked among top 10 in school.</li>
+            </ul>
+        </section>
+
+        <!-- Languages -->
+        <section>
+            <h2>Languages</h2>
+            <div class="skills">
+                <div class="skill">English</div>
+                <div class="skill">Telugu</div>
+            </div>
+        </section>
+
+        <!-- Hobbies -->
+        <section>
+            <h2>Hobbies & Interests</h2>
+            <div class="skills">
+                <div class="skill">Watching Movies</div>
+                <div class="skill">Playing Games</div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer>
+            <p>© 2025 GADARI UDAY KIRAN | Portfolio</p>
+        </footer>
+    </div>
+</body>
+</html>

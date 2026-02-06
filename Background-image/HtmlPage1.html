@@ -1,0 +1,181 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>This is Heading</title>
+    <style>
+        body {
+            background-image: url('https://images.pexels.com/photos/2990258/pexels-photo-2990258.jpeg');
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        h1 {
+            color: white;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+            margin: 20px;
+        }
+
+        h2 {
+            text-align: center;
+            color: white;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 30px;
+        }
+
+        .name {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 30px;
+        }
+
+        #coffee, #hot, #Special {
+            border: 3px solid brown;
+            background-color: peru;
+            width: 300px;
+            height: 250px;
+            margin: 50px;
+            border-radius: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: transform 0.3s ease, background-color 0.3s ease;
+        }
+
+            #coffee:hover, #hot:hover, #Special:hover {
+                transform: scale(1.05);
+                background-color: chocolate;
+            }
+
+        #coffee {
+            background-color: darkorange;
+        }
+
+        #hot {
+            background-color: darkorange;
+        }
+
+        #Special {
+            background-color: darkorange;
+        }
+
+        ul {
+            padding-left: 20px;
+            margin: 0;
+        }
+
+        li {
+            margin-bottom: 8px;
+        }
+
+        #coffee ul li:hover {
+            transform: scale(1.1);
+            color: yellow;
+        }
+
+        #hot ul li:hover {
+            transform: scale(1.1);
+            color: yellow;
+        }
+
+        #Special ul li:hover {
+            transform: scale(1.1);
+            color: yellow;
+        }
+
+        h4 {
+            text-align: center;
+            color: white;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
+        }
+        body{
+            margin:0;
+            font-family:Arial,sans-serif;
+            padding-bottom:60px;
+        }
+        main{
+            flex:1;
+            padding:20px;
+        }
+
+        footer {
+            position:fixed;
+            bottom:0;
+            left:0;
+            width:100%;
+            text-align: center;
+            color:white;
+           background:none;
+           padding: 15px;
+           border-top:none;
+           box-sizing:border-box;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1 style="text-align:center">
+            TEA TIME
+        </h1>
+    </header>
+    <main>
+        <marquee direction="right" scrollamount="10" style="color:chocolate; font-size:20px; text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);">
+            Welcome to Tea Time! Enjoy the finest selection of teas from around the world and indulge in a moment of tranquility
+        </marquee>
+        <hr />
+        <h2>WELCOME</h2>
+        <div class="name">
+            <div id="coffee">
+                <ul>
+                    <h3>Cold Coffees</h3>
+                    <li>Iced Coffee </li>
+                    <li>Cold Brew </li>
+                    <li> Frappe </li>
+                    <li>Nitro Coffee</li>
+                    <li>Affogato</li>
+                </ul>
+            </div>
+            <div id="hot">
+                <ul>
+                    <h3> Hot Coffees</h3>
+                    <li>
+                        Espresso
+                    </li>
+                    <li>
+                        Americano
+                    </li>
+                    <li>
+                        Cappuccino
+                    </li>
+                    <li>
+                        Latte
+                    </li>
+                </ul>
+            </div>
+            <div id="Special">
+                <ul>
+                    <h3>Special Coffees</h3>
+                    <li>Mocha</li>
+                    <li>Caramel Macchiato</li>
+                    <li>Irish Coffee</li>
+                    <li>Turkish Coffee</li>
+                </ul>
+
+            </div>
+        </div>
+        <h4 >
+            Thank you for visiting my hotel and have a nice day
+        </h4>
+        <footer>
+           <p> @copy 2k25 Tea Time. All rights reserved </p>
+        </footer>
+
+    </main>
+
+</body>
+</html>

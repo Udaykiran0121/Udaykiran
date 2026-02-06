@@ -1,0 +1,14 @@
+﻿@model Product_details.Models.Products
+
+<h1>Product Details</h1>
+<dl>
+    <dt>Product Id</dt>
+    <dd>@Model.productId</dd>
+    <dt>Product Name</dt>
+    <dd>@Model.productName</dd>
+    <dt>Product Price</dt>
+    <dd>@Model.price</dd>
+</dl>
+<br />
+@Html.ActionLink("back to Index","Index","Products")
+    ""

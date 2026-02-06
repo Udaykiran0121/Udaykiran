@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.36221.1 d17.14
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "call-by-out", "call-by-out.csproj", "{F65686F9-5371-4255-A399-53020B61BB51}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F65686F9-5371-4255-A399-53020B61BB51}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F65686F9-5371-4255-A399-53020B61BB51}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F65686F9-5371-4255-A399-53020B61BB51}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F65686F9-5371-4255-A399-53020B61BB51}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {FB57E7FB-5F46-4DC1-90B5-30D2A6CF61E2}
+	EndGlobalSection
+EndGlobal

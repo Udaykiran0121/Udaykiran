@@ -1,0 +1,17 @@
+﻿@model IEnumerable<Product_details.Models.Products>
+<h1>Products Lists:</h1>
+<table width="400" border="1">
+    <th>Product Id</th>
+    <th>Product Name</th>
+    <th>Price</th>
+    <th>View Details</th>
+    @foreach(var item in Model)
+            {
+                <tr>
+                    <td>@item.productId</td>
+                    <td>@item.productName</td>
+                    <td>@item.price</td>
+                    <td>@Html.ActionLink("Details", "Details","Products",new {id=item.productId},null)</td>
+                </tr>
+            }
+</table>

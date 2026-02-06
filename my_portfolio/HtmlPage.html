@@ -1,0 +1,154 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gadari Uday Kiran - Portfolio</title>
+  <style>
+    /* ===== Global ===== */
+    * { margin: 0; padding: 0; box-sizing: border-box; font-family: "Poppins", sans-serif; }
+    body { background: #0d1117; color: #c9d1d9; line-height: 1.6; scroll-behavior: smooth; }
+    a { text-decoration: none; color: #58a6ff; transition: 0.3s; }
+    a:hover { color: #1f6feb; }
+    h1,h2,h3 { font-weight: 600; color: #fff; }
+    .container { width: 90%; max-width: 1100px; margin: auto; padding: 60px 0; }
+
+    /* ===== Navbar ===== */
+    nav { position: fixed; top: 0; left: 0; width: 100%; background: rgba(22,27,34,0.95);
+          display: flex; justify-content: space-between; align-items: center;
+          padding: 15px 50px; z-index: 1000; backdrop-filter: blur(10px); }
+    nav h2 { color: #58a6ff; }
+    nav ul { display: flex; list-style: none; gap: 25px; }
+    nav ul li a { color: #c9d1d9; font-weight: 500; }
+    nav ul li a:hover { color: #58a6ff; }
+
+    /* ===== Hero ===== */
+    .hero { height: 100vh; display: flex; flex-direction: column; justify-content: center;
+            align-items: center; text-align: center; padding: 0 20px; }
+    .hero h1 { font-size: 2.5em; margin-bottom: 10px; }
+    .typing { color: #58a6ff; font-size: 1.2em; border-right: 3px solid #58a6ff; white-space: nowrap; overflow: hidden; width: 0; animation: typing 4s steps(30,end) forwards, blink 0.7s infinite; }
+    @keyframes typing { to { width: 100%; } }
+    @keyframes blink { 50% { border-color: transparent; } }
+    .btn { margin-top: 20px; padding: 12px 24px; background: #58a6ff; color: #fff; border-radius: 30px; transition: 0.3s; }
+    .btn:hover { background: #1f6feb; transform: scale(1.05); }
+
+    /* ===== Sections ===== */
+    section { padding: 80px 0; }
+    h2 { font-size: 2em; margin-bottom: 20px; text-align: center; }
+
+    /* ===== Skills ===== */
+    .skills { display: flex; flex-wrap: wrap; justify-content: center; gap: 15px; }
+    .skill { background: #21262d; padding: 12px 20px; border-radius: 8px; font-size: 1em; transition: 0.3s; cursor: pointer; }
+    .skill:hover { background: #30363d; transform: translateY(-3px); }
+
+    /* ===== Projects ===== */
+    .projects { display: grid; grid-template-columns: repeat(auto-fit,minmax(280px,1fr)); gap: 20px; }
+    .project-card { background: #161b22; padding: 20px; border-radius: 10px; transition: 0.3s; cursor: pointer; }
+    .project-card:hover { transform: translateY(-8px); background: #21262d; }
+
+    /* ===== Modal ===== */
+    .modal { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+             background: rgba(0,0,0,0.8); justify-content: center; align-items: center; z-index: 2000; }
+    .modal-content { background: #161b22; padding: 25px; border-radius: 10px; max-width: 600px; text-align: center; }
+    .close-btn { background: #58a6ff; padding: 8px 15px; border-radius: 5px; cursor: pointer; margin-top: 15px; display: inline-block; }
+    .close-btn:hover { background: #1f6feb; }
+
+    /* ===== Contact ===== */
+    .contact { text-align: center; }
+    footer { text-align: center; padding: 20px; background: #161b22; color: #8b949e; }
+    @media (max-width: 768px) { nav { padding: 15px 20px; } .hero h1 { font-size: 2em; } }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav>
+    <h2>UDAY</h2>
+    <ul>
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- Hero -->
+  <section class="hero">
+    <h1>Hi, I'm <span style="color:#58a6ff;">Gadari Uday Kiran</span></h1>
+    <p class="typing">Electrical Engineer | Aspiring Software Developer</p>
+    <a href="#contact" class="btn">Download Resume</a>
+  </section>
+
+  <!-- About -->
+  <section id="about" class="container">
+    <h2>About Me</h2>
+    <p>I am an Electrical Engineer with experience in automation at Sundram Fasteners Ltd. and an internship at BHEL. Skilled in C#, ASP.NET, SQL, HTML, and CSS. I am now transitioning into IT/software, combining analytical problem-solving with development skills to deliver impactful solutions.</p>
+  </section>
+
+  <!-- Skills -->
+  <section id="skills" class="container">
+    <h2>Skills</h2>
+    <div class="skills">
+      <div class="skill">C#</div>
+      <div class="skill">ASP.NET</div>
+      <div class="skill">SQL</div>
+      <div class="skill">HTML</div>
+      <div class="skill">CSS</div>
+      <div class="skill">Automation</div>
+    </div>
+  </section>
+
+  <!-- Projects -->
+  <section id="projects" class="container">
+    <h2>Projects</h2>
+    <div class="projects">
+      <div class="project-card" onclick="openModal('modal1')">
+        <h3>Turbo Alternator Testing</h3>
+        <p>Click for details</p>
+      </div>
+      <div class="project-card" onclick="openModal('modal2')">
+        <h3>Automation in Manufacturing</h3>
+        <p>Click for details</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Modals -->
+  <div id="modal1" class="modal">
+    <div class="modal-content">
+      <h3>Turbo Alternator Testing</h3>
+      <p>Analyzed and tested turbo alternators at BHEL Hyderabad. Documented working principles and performance.</p>
+      <span class="close-btn" onclick="closeModal('modal1')">Close</span>
+    </div>
+  </div>
+
+  <div id="modal2" class="modal">
+    <div class="modal-content">
+      <h3>Automation in Manufacturing</h3>
+      <p>Implemented automation processes at Sundram Fasteners Ltd., improving efficiency and reducing energy costs.</p>
+      <span class="close-btn" onclick="closeModal('modal2')">Close</span>
+    </div>
+  </div>
+
+  <!-- Contact -->
+  <section id="contact" class="container">
+    <h2>Contact</h2>
+    <div class="contact">
+      <p>Email: <a href="mailto:udaykirangadari2018@gmail.com">udaykirangadari2018@gmail.com</a></p>
+      <p>Phone: +91 9652842955</p>
+      <p>LinkedIn: <a href="#">LinkedIn Profile</a></p>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 Gadari Uday Kiran | Portfolio</p>
+  </footer>
+
+  <!-- JavaScript -->
+  <script>
+    function openModal(id){ document.getElementById(id).style.display="flex"; }
+    function closeModal(id){ document.getElementById(id).style.display="none"; }
+  </script>
+</body>
+</html>
