@@ -1,0 +1,47 @@
+﻿@{
+    ViewBag.Title = "HR Dashboard";
+}
+
+<div class="container mt-4">
+
+    <h2 class="mb-3">HR Dashboard</h2>
+    <h5 class="text-muted">Welcome HR 👋</h5>
+    <hr />
+
+    <div class="row text-center">
+
+        <div class="col-md-4 mb-3">
+            <div class="card bg-success text-white shadow">
+                <div class="card-body">
+                    <h5>Total Employees</h5>
+                    <h2>@ViewBag.TotalEmployees</h2>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4 mb-3">
+            <div class="card bg-info text-white shadow">
+                <div class="card-body">
+                    <h5>Total Managers</h5>
+                    <h2>@ViewBag.TotalManagers</h2>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4 mb-3">
+            <div class="card bg-warning text-dark shadow">
+                <div class="card-body">
+                    <h5>Today's Attendance</h5>
+                    <h2>@ViewBag.TodayAttendance</h2>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <a href="@Url.Action("Index","HRDashboard")" class="btn btn-primary">
+        Back To Dashboard
+    </a>
+    
+
+</div>
+

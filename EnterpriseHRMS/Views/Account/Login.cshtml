@@ -1,0 +1,68 @@
+﻿@model EnterpriseHRMS.Models.LoginViewModel
+
+@{
+    ViewBag.Title = "Login";
+}
+
+<style>
+    .login-wrapper {
+        background: linear-gradient(to right, #141E30, #243B55);
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .login-card {
+        background: white;
+        padding: 40px;
+        border-radius: 10px;
+        width: 100%;
+        max-width: 500px;
+        box-shadow: 0px 10px 30px rgba(0,0,0,0.2);
+    }
+
+    .btn-login {
+        width: 100%;
+    }
+</style>
+
+<div class="login-wrapper">
+    <div class="login-card">
+
+        <h2 class="text-center mb-4">Login</h2>
+
+        @using (Html.BeginForm("Login", "Account", FormMethod.Post))
+        {
+            @Html.AntiForgeryToken()
+
+            @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+            <div class="form-group mb-3">
+                @Html.LabelFor(m => m.Email)
+                @Html.TextBoxFor(m => m.Email, new { @class = "form-control", placeholder = "Enter email" })
+                @Html.ValidationMessageFor(m => m.Email, "", new { @class = "text-danger" })
+            </div>
+
+            <div class="form-group mb-3">
+                @Html.LabelFor(m => m.Password)
+                @Html.PasswordFor(m => m.Password, new { @class = "form-control", placeholder = "Enter password" })
+                @Html.ValidationMessageFor(m => m.Password, "", new { @class = "text-danger" })
+            </div>
+
+            <button type="submit" class="btn btn-primary btn-login">
+                Login
+            </button>
+        }
+
+        <div class="text-center mt-3">
+            Don't have an account?
+            <a href="/Account/Register">Register Here</a>
+        </div>
+
+    </div>
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

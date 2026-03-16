@@ -1,0 +1,144 @@
+﻿@model EnterpriseHRMS.Models.RegisterViewModel
+@{
+    ViewBag.Title = "Register";
+}
+
+<style>
+    .register-wrapper {
+        background: linear-gradient(to right, #141E30, #243B55);
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .register-card {
+        background: white;
+        padding: 40px;
+        border-radius: 10px;
+        width: 100%;
+        max-width: 720px;
+        box-shadow: 0px 10px 30px rgba(0,0,0,0.2);
+    }
+
+    .btn-register {
+        width: 100%;
+    }
+
+    #loadingscreen {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0,0,0,0.6);
+        justify-content: center;
+        align-items: center;
+        z-index: 9999;
+    }
+</style>
+
+@if (TempData["RegisterSuccess"] != null)
+{
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            document.getElementById("loadingscreen").style.display = "flex";
+
+            setTimeout(function () {
+                document.getElementById("loadingscreen").style.display = "none";
+                alert("Registration Completed Successfully");
+                window.location.href = "/Home/Index";
+            }, 2000);
+        });
+    </script>
+}
+
+<script>
+    function showLoading() {
+        document.getElementById("loadingscreen").style.display = "flex";
+    }
+</script>
+
+<div id="loadingscreen">
+    <div style="text-align:center; color:white;">
+        <h3>Create a new account...</h3>
+        <div class="spinner-border text-light"></div>
+    </div>
+</div>
+
+<main aria-labelledby="title">
+
+    <div class="register-wrapper">
+        <div class="register-card">
+
+            <h2 class="text-center mb-4">@ViewBag.Title</h2>
+
+            @using (Html.BeginForm("Register", "Account", FormMethod.Post, new { onsubmit = "showLoading()" }))
+            {
+                @Html.AntiForgeryToken()
+
+                @Html.ValidationSummary(true, "", new { @class = "text-danger mb-3" })
+
+                <div class="row mb-3">
+                    @Html.LabelFor(m => m.FirstName, new { @class = "col-md-3 col-form-label" })
+                    <div class="col-md-9">
+                        @Html.TextBoxFor(m => m.FirstName, new { @class = "form-control" })
+                    </div>
+                </div>
+
+                <div class="row mb-3">
+                    @Html.LabelFor(m => m.MiddleName, new { @class = "col-md-3 col-form-label" })
+                    <div class="col-md-9">
+                        @Html.TextBoxFor(m => m.MiddleName, new { @class = "form-control" })
+                    </div>
+                </div>
+
+                <div class="row mb-3">
+                    @Html.LabelFor(m => m.LastName, new { @class = "col-md-3 col-form-label" })
+                    <div class="col-md-9">
+                        @Html.TextBoxFor(m => m.LastName, new { @class = "form-control" })
+                    </div>
+                </div>
+
+                <div class="row mb-3">
+                    @Html.LabelFor(m => m.MobileNumber, new { @class = "col-md-3 col-form-label" })
+                    <div class="col-md-9">
+                        @Html.TextBoxFor(m => m.MobileNumber, new { @class = "form-control" })
+                    </div>
+                </div>
+
+                <div class="row mb-3">
+                    @Html.LabelFor(m => m.Email, new { @class = "col-md-3 col-form-label" })
+                    <div class="col-md-9">
+                        @Html.TextBoxFor(m => m.Email, new { @class = "form-control" })
+                    </div>
+                </div>
+
+                <div class="row mb-3">
+                    @Html.LabelFor(m => m.Password, new { @class = "col-md-3 col-form-label" })
+                    <div class="col-md-9">
+                        @Html.PasswordFor(m => m.Password, new { @class = "form-control" })
+                    </div>
+                </div>
+
+                <div class="row mb-4">
+                    @Html.LabelFor(m => m.ConfirmPassword, new { @class = "col-md-3 col-form-label" })
+                    <div class="col-md-9">
+                        @Html.PasswordFor(m => m.ConfirmPassword, new { @class = "form-control" })
+                    </div>
+                </div>
+
+                <button type="submit" class="btn btn-dark btn-register">
+                    Register
+                </button>
+            }
+
+        </div>
+    </div>
+
+</main>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

@@ -1,0 +1,25 @@
+﻿@model  IEnumerable<one.Models.Employee>
+
+<h2>Employees List</h2>
+
+<table border="1">
+    <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Designation</th>
+        <th>Salary</th>
+    </tr>
+ @foreach (var n in Model)
+            {
+                <tr>
+                    <td>@n.Id</td>
+                    <td>@n.EmpName</td>
+                    <td>@n.Designation</td>
+                    <td>@n.Salary</td>
+                </tr>
+            }
+</table>
+<p>
+    @Html.ActionLink("create", "create")
+    @Html.ActionLink("Edit", "Edit")
+</p>

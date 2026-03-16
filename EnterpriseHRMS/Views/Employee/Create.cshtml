@@ -1,0 +1,44 @@
+﻿@model EnterpriseHRMS.Models.EmployeeModel
+
+<h2>Create Employee</h2>
+@Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+@using (Html.BeginForm())
+
+{
+    @Html.AntiForgeryToken()
+    <div class="form-group">
+        @Html.LabelFor(m => m.EmpFullName)
+        @Html.TextBoxFor(m => m.EmpFullName, new { @class = "form-control" })
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(m => m.Email)
+        @Html.TextBoxFor(m => m.Email, new { @class = "form-control" })
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(m => m.Department)
+        @Html.TextBoxFor(m => m.Department, new { @class = "form-control" })
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(m =>m.Role)
+        @Html.DropDownListFor(m =>m.Role,new SelectList(new List<String>
+        {
+        "Employee",
+        "HR",
+        "Manager"
+        }),
+        "Select Role",
+        new {@class="form-Control"});
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(m => m.JoiningDate)
+        @Html.TextBoxFor(m => m.JoiningDate, "{0:yyyy-MM-dd}",
+            new { @type = "date", @class = "form-control" })
+    </div>
+    <input type="submit" value="Save" class="btn btn-success" />
+
+}

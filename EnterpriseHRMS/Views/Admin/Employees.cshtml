@@ -1,0 +1,45 @@
+﻿@model IEnumerable<EnterpriseHRMS.Models.EmployeeModel>
+
+<h1 style="color:darkslategrey">HR's Info</h1>
+@using (Html.BeginForm())
+{
+    <p>
+        Search: @Html.TextBox("searchString")
+        <input type="submit" value="Search" class="btn btn-primary" required />
+    </p>
+}
+<table class="table">
+    <tr>
+        <th>Id</th>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Department</th>
+        <th>Joining Date</th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.Id</td>
+            <td>@item.EmpFullName</td>
+            <td>@item.Email</td>
+            <td>@item.Department</td>
+            <td>@item.JoiningDate.ToShortDateString()</td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", "Employee",
+                 new { id = item.Id },
+                 new { @class = "btn btn-outline-secondary btn-sm" })
+            </td>
+            <td>
+                @Html.ActionLink("Delete", "Delete", "Employee",
+                 new { id = item.Id },
+                 new { @class = "btn btn-outline-danger btn-sm" })
+            </td>
+        </tr>
+    }
+</table>
+<a href="@Url.Action("Index","Admin")" class="btn btn-primary">
+    Back To Dashboard
+</a>
+
+

@@ -1,0 +1,50 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - GenZStaff | GenZ-Tech Solutions</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+
+</head>
+<body>
+    <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-dark bg-dark">
+        <div class="container">
+            @Html.ActionLink("GenZ-Tech Ad", "Index", "Employees", null, new { @class = "navbar-brand" })
+            <div class="bg-dark text-white p-3" style="width:250px" >
+                <ul class="nav flex-column">
+                    <li class="nav-item">
+                        @Html.ActionLink("Dashboard", "Index", "Admin", null, new { @class = "nav-link text-white" })
+                    </li>
+                    <li class="nav-item">
+                        @Html.ActionLink("All users", "users", "Admin", null, new { @class = "nav-link text-white" })
+                    </li>
+                    <li class="nav-item">
+                        @Html.ActionLink("Employees", "Employees", "Admin", null, new { @class = "nav-link text-white" })
+                    </li>
+                    <li class="nav-item">
+                        @Html.ActionLink("HR Team", "HR", "Admin", null, new { @class = "nav-link text-white" })
+                    </li>
+                    <li class="nav-item">
+                        @Html.ActionLink("Managers", "Managers", "Admin", null, new { @class = "nav-link text-white" })
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="container body-content">
+        @RenderBody()
+        <hr />
+        <footer>
+            <p>&copy; @DateTime.Now.Year -GenZ-Tech Staff</p>
+        </footer>
+    </div>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+</body>
+</html>
+
+

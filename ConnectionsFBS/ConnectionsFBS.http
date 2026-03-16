@@ -1,0 +1,6 @@
+@ConnectionsFBS_HostAddress = http://localhost:5175
+
+GET {{ConnectionsFBS_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

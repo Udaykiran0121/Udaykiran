@@ -1,0 +1,151 @@
+﻿@{
+    ViewBag.Title = "Home";
+}
+@if (TempData["RegisterSuccess"] != null)
+{
+    <script>
+                    alert("@TempData["RegisterSuccess"]");
+    </script>
+}
+<style>
+    .hero {
+        background: linear-gradient(to right, #141E30, #243B55);
+        color: white;
+        padding: 100px 0;
+        text-align: center;
+    }
+
+        .hero h1 {
+            font-size: 50px;
+            font-weight: bold;
+        }
+
+        .hero p {
+            font-size: 20px;
+            margin-top: 20px;
+        }
+
+    .section-title {
+        font-weight: bold;
+        margin-bottom: 40px;
+    }
+
+    .service-box {
+        padding: 30px;
+        border-radius: 10px;
+        background-color: #f8f9fa;
+        transition: 0.3s;
+    }
+
+        .service-box:hover {
+            transform: translateY(-8px);
+            box-shadow: 0px 10px 25px rgba(0,0,0,0.1);
+        }
+
+    .stats-section {
+        background-color: #f1f1f1;
+        padding: 60px 0;
+        text-align: center;
+    }
+
+        .stats-section h3 {
+            font-size: 40px;
+            font-weight: bold;
+        }
+
+    .cta-section {
+        background: #007bff;
+        color: white;
+        padding: 60px 0;
+        text-align: center;
+    }
+
+        .cta-section a {
+            margin-top: 15px;
+        }
+</style>
+
+<section class="hero">
+    <div class="container">
+        <h1>Welcome to GenZ-Tech Solutions</h1>
+        <p>Empowering modern workplaces with smart HR & enterprise solutions.</p>
+        <a href="/Account/Register" class="btn btn-light btn-lg mt-3">Join With Us</a>
+    </div>
+</section>
+
+<section class="py-5">
+    <div class="container text-center">
+        <h2 class="section-title">Who We Are</h2>
+        <p>
+            GenZ-Tech Solutions is a next-generation technology company focused on
+            enterprise HR management systems. We provide secure, scalable, and
+            intelligent workforce solutions designed for modern organizations.
+        </p>
+    </div>
+</section>
+
+<section class="py-5 bg-light">
+    <div class="container">
+        <h2 class="text-center section-title">Our Services</h2>
+        <div class="row text-center">
+
+            <div class="col-md-4">
+                <div class="service-box">
+                    <h4>HR Management Systems</h4>
+                    <p>Complete employee lifecycle management and performance tracking.</p>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="service-box">
+                    <h4>Enterprise Web Applications</h4>
+                    <p>Secure, scalable web platforms for business automation.</p>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="service-box">
+                    <h4>Cloud & Deployment</h4>
+                    <p>Reliable cloud infrastructure and system integration services.</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<section class="stats-section">
+    <div class="container">
+        <h2 class="section-title">Our Impact</h2>
+        <div class="row">
+
+            <div class="col-md-3">
+                <h3>150+</h3>
+                <p>Employees Managed</p>
+            </div>
+
+            <div class="col-md-3">
+                <h3>25+</h3>
+                <p>Projects Delivered</p>
+            </div>
+
+            <div class="col-md-3">
+                <h3>12+</h3>
+                <p>Enterprise Clients</p>
+            </div>
+
+            <div class="col-md-3">
+                <h3>99%</h3>
+                <p>Client Satisfaction</p>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<section class="cta-section">
+    <div class="container">
+        <h2>Ready to Build Your Career With Us?</h2>
+        <a href="/Account/Login" class="btn btn-light btn-lg">Employee Login</a>
+    </div>
+</section>

@@ -1,0 +1,100 @@
+﻿@{
+    ViewBag.Title = "Contact Us";
+}
+
+<style>
+    .contact-hero {
+        background: linear-gradient(to right, #2c3e50, #4ca1af);
+        color: white;
+        padding: 70px 0;
+        text-align: center;
+    }
+
+    .contact-section {
+        padding: 60px 0;
+    }
+
+    .contact-box {
+        background: #f8f9fa;
+        padding: 30px;
+        border-radius: 10px;
+        transition: 0.3s;
+    }
+
+        .contact-box:hover {
+            transform: translateY(-5px);
+            box-shadow: 0px 10px 20px rgba(0,0,0,0.1);
+        }
+
+    .contact-info h5 {
+        font-weight: bold;
+    }
+</style>
+
+<section class="contact-hero">
+    <div class="container">
+        <h1>Contact GenZ-Tech Solutions</h1>
+        <p class="lead mt-3">
+            We’d love to hear from you. Reach out for business inquiries or support.
+        </p>
+    </div>
+</section>
+
+<section class="contact-section">
+    <div class="container">
+        <div class="row">
+
+            <div class="col-md-6">
+                <div class="contact-box contact-info">
+                    <h4 class="mb-4">Corporate Office</h4>
+
+                    <h5>📍 Address</h5>
+                    <p>
+                        GenZ-Tech Solutions Pvt Ltd<br />
+                        5th Floor, Tech Park Tower,<br />
+                        Hitech City, Hyderabad,<br />
+                        Telangana, India – 500081
+                    </p>
+
+                    <h5>📞 Phone</h5>
+                    <p>+91 96528 42955</p>
+
+                    <h5>📧 Email</h5>
+                    <p>support@genztechsolutions.com</p>
+
+                    <h5>🕒 Working Hours</h5>
+                    <p>Monday – Friday : 9:00 AM – 6:00 PM</p>
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <div class="contact-box">
+                    <h4 class="mb-4">Send Us a Message</h4>
+
+                    <form>
+                        <div class="form-group mb-3">
+                            <label>Your Name</label>
+                            <input type="text" class="form-control" placeholder="Enter your name" />
+                        </div>
+
+                        <div class="form-group mb-3">
+                            <label>Your Email</label>
+                            <input type="email" class="form-control" placeholder="Enter your email" />
+                        </div>
+
+                        <div class="form-group mb-3">
+                            <label>Message</label>
+                            <textarea class="form-control" rows="4" placeholder="Type your message"></textarea>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary">
+                            Send Message
+                        </button>
+                    </form>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>

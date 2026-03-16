@@ -1,0 +1,52 @@
+﻿@{
+    ViewBag.Title = "Employee Dashboard";
+}
+
+<h2>Employee Dashboard</h2>
+
+<hr />
+
+<h3>Welcome @User.Identity.Name 👋</h3>
+
+<br />
+
+@if (ViewBag.Employee != null)
+{
+    <div class="alert alert-info">
+        <h4>My Profile</h4>
+
+        <p><strong>Full Name:</strong> @ViewBag.Employee.EmpFullName</p>
+
+        <p><strong>Department:</strong> @ViewBag.Employee.Department</p>
+
+        <p>
+            <strong>Joining Date:</strong>
+            @Convert.ToDateTime(ViewBag.Employee.JoiningDate).ToString("dd-MM-yyyy")
+        </p>
+    </div>
+}
+
+@if (ViewBag.TodayAttendance != null)
+{
+    <div class="alert alert-success">
+        <h4>Today's Attendance</h4>
+
+        <p>
+            <strong>Login Time:</strong>
+            @Convert.ToDateTime(ViewBag.TodayAttendance.LoginTime).ToString("hh:mm tt")
+        </p>
+
+        <p>
+            <strong>Logout Time:</strong>
+            @(ViewBag.TodayAttendance.LogoutTime != null
+                ? Convert.ToDateTime(ViewBag.TodayAttendance.LogoutTime).ToString("hh:mm tt")
+                : "Not Logged Out Yet")
+        </p>
+    </div>
+}
+else
+{
+    <div class="alert alert-warning">
+        No attendance record found for today.
+    </div>
+}

@@ -1,0 +1,69 @@
+﻿@model EnterpriseHRMS.Models.DashboardView
+
+@{
+    Layout = "~/Views/Shared/_HRDashboard.cshtml";
+}
+
+<h1>HRMS Dashboard</h1>
+
+<div class="row">
+
+    <div class="col-md-3">
+        <div class="alert alert-primary text-center">
+            <h4>Total Employees</h4>
+            <h2>@Model.TotalEmployees</h2>
+        </div>
+    </div>
+
+
+    <div class="col-md-3">
+        <div class="alert alert-success text-center">
+            <h4>Active Employees</h4>
+            <h2>@Model.ActiveEmployees</h2>
+        </div>
+    </div>
+
+    <div class="col-md-3">
+        <div class="alert alert-danger text-center">
+            <h4>Deleted Employees</h4>
+            <h2>@Model.DeletedEmployees</h2>
+        </div>
+    </div>
+
+    <div class="col-md-3">
+        <div class="alert alert-info text-center">
+            <h4>Added Today</h4>
+            <h2>@Model.EmployeesAddedToday</h2>
+        </div>
+    </div>
+
+</div>
+
+<hr />
+
+<h3>Recent Employees</h3>
+
+<table class="table table-bordered table-striped">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Department</th>
+            <th>Created Date</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        @foreach (var item in Model.RecentEmployees)
+        {
+            <tr>
+                <td>@item.Id</td>
+                <td>@item.EmpFullName</td>
+                <td>@item.Email</td>
+                <td>@item.Department</td>
+                <td>@item.CreatedDate.ToString("dd-MM-yyyy")</td>
+            </tr>
+        }
+    </tbody>
+</table>

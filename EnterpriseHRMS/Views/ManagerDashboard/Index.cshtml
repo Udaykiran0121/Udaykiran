@@ -1,0 +1,46 @@
+﻿@model EnterpriseHRMS.Models.ManagerDashboardViewModel
+
+@{
+    ViewBag.Title = "Manager Dashboard";
+}
+
+<h2>Manager Dashboard</h2>
+
+<h4>Welcome @User.Identity.Name</h4>
+
+<hr />
+
+<div class="row">
+
+    <div class="col-md-6">
+        <div class="alert alert-primary">
+            <h4>Total Employees</h4>
+            <h2>@Model.TotalEmployees</h2>
+        </div>
+    </div>
+
+    <div class="col-md-6">
+        <div class="alert alert-success">
+            <h4>Today's Attendance</h4>
+            <h2>@Model.TodayAttendance</h2>
+        </div>
+    </div>
+
+</div>
+
+<hr />
+
+<div class="mt-3">
+
+    <a href="@Url.Action("Employees", "ManagerDashboard")" class="btn btn-info">
+        View Employees
+    </a>
+
+    <a href="@Url.Action("Attendance", "ManagerDashboard")" class="btn btn-warning">
+        View Attendance
+    </a>
+
+</div>
+<a href="@Url.Action("Index", "ManagerDashboard")">
+    Back To Dashboard
+</a>

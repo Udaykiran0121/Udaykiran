@@ -1,0 +1,35 @@
+﻿@model EnterpriseHRMS.Models.EmployeeModel
+@{
+    ViewBag.Title = "Profile";
+}
+
+<h2> My Profile</h2>
+
+<table class="table table-bordered">
+    <tr>
+        <td>Name</td>
+        <td>@Model.EmpFullName</td>
+    </tr>
+
+    <tr>
+        <td>Email</td>
+        <td>@Model.Email</td>
+    </tr>
+
+    <tr>
+        <td>Department</td>
+        <td>@Model.Department</td>
+    </tr>
+
+    <tr>
+        <td>Role</td>
+        <td>@Model.Role</td>
+    </tr>
+
+    <tr>
+        <td>Joined Date</td>
+        <td>@Model.JoiningDate</td>
+    </tr>
+    
+</table>
+
